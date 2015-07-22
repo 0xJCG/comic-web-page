@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+	<head>
+		<title>Kitties &amp; Zombies</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<link href="css/pc_screen.css" type="text/css" rel="stylesheet" />
+		<script>
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1";
+				fjs.parentNode.insertBefore(js, fjs);
+			}
+			(document, 'script', 'facebook-jssdk'));
+			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+		</script>
+		<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+			{lang: 'es'}
+		</script> 
+	</head>
+	<body>
+		<div id="container">
+			<div id="header"><!--div: menubar, adbar, sidebar-->
+				<h1><a href="index.php"><img src="images/logo.jpg" alt="Kitties &amp; Zombies" /></a></h1>
+				<p><?php print (isset($_SESSION['user']))?"&iexcl;Hola, <a href=\"new.php\">" . $_SESSION['user'] . '</a>! - <a href="login.php?logout">Desconectar</a>':'<a href="login.php">Conectar</a>'; ?></p>
+			</div>
+			<div class="clear"></div>
+			<div id="maincontent">
+				<div class="fb-like" data-href="http://localhost/comic/index.php?comic=<?php print $comic_id; ?>" data-send="false" data-layout="button_count" data-show-faces="false"></div>
+				<div>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost/comic/index.php?comic=<?php print $comic_id; ?>" data-text="Descubre nuestra nueva vi&ntilde;eta en 'Kitties &amp; Zombies':" data-lang="es" data-dnt="true">Twittear</a>
+				</div>
+				<div>
+					<g:plusone size="medium"></g:plusone>
+				</div>
