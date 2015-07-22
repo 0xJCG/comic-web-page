@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	include_once('includes/header.html');
+	include_once('includes/headerwc.html');
 	require_once('includes/functions.php');
 	$functions = new Functions;
 	$functions->Connect();

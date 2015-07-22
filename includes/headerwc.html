@@ -1,0 +1,15 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+	<head>
+		<title>Kitties &amp; Zombies</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<link href="css/pc_screen.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<div id="container">
+			<div id="header"><!--div: menubar, adbar, sidebar-->
+				<h1><a href="index.php"><img src="images/logo.jpg" alt="Kitties &amp; Zombies" /></a></h1>
+				<p><?php print (isset($_SESSION['user']))?"&iexcl;Hola, <a href=\"new.php\">" . $_SESSION['user'] . '</a>! - <a href="login.php?logout">Log out</a>':'<a href="login.php">Log in</a>'; ?></p>
+			</div>
+			<div class="clear"></div>
+			<div id="maincontent">

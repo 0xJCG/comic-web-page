@@ -32,9 +32,11 @@
 		
 		/* Printing the comic. */
 		require_once('includes/comic.php');
+	} else {
+		include_once('includes/headerwc.html');
+		print "\t\t\t\t" . '<p>There is no comic to show.</p>' . "\n";
+		include_once('includes/footer.html');
 	}
-	else
-		print "\t\t\t\t" . '<p>Error, el c&oacute;mic seleccionado no existe.</p>' . "\n";
 	
-	//$functions->Disconnect();
+	$functions->Disconnect();
 ?>

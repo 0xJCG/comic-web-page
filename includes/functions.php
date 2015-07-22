@@ -72,13 +72,13 @@
 				<form action="login.php" method="post">
 					<p>
 						<label>
-							Usuario
-							<span class="small">M&aacute;x. 30 caracteres:</span>
+							User
+							<span class="small">Max. 30 characters:</span>
 						</label>
 						<input type="text" name="user" maxlength="30" />
 						<label>
-							Contrase&ntilde;a
-							<span class="small">Introduce tu contrase&ntilde;a:</span>
+							Password
+							<span class="small">Enter your password:</span>
 						</label>
 						<input type="password" name="pass" />
 						<br />
@@ -92,13 +92,13 @@
 ?>
 				<form action="new.php" method="post" enctype="multipart/form-data">
 					<label>
-						T&iacute;tulo
-						<span class="small">M&aacute;x. 50 caracteres:</span>
+						Title
+						<span class="small">Max. 50 characters:</span>
 					</label>
 					<input type="text" name="title" />
 					<label>
-						C&oacute;mic
-						<span class="small">Debe ser una imagen:</span>
+						Comic image
+						<span class="small">It has to be an image:</span>
 					</label>
 					<input type="file" name="comic" />
 					<br />
