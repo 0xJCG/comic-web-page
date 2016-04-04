@@ -1,6 +1,13 @@
 <?php
 	session_start();
 	
+	/* Getting the language file. */
+	$lang = $_SESSION['language'];
+	if (isset($lang))
+		require_once('/languages/' . $lang . '.php');
+	else // Default: Spanish.
+		require_once('/languages/es_ES.php');
+
 	/*require_once('includes/functions.php');
 	$functions = new Functions;*/
 	require_once("Database.class.php");
@@ -16,9 +23,10 @@
 	else
 		$rs = $db->execute("SELECT comics.id, path, title, username, date FROM comics, users WHERE comics.author = users.id ORDER BY id DESC LIMIT 0, 1"); // By default, we show the newest comic.
 	
+	include_once('includes/header.html');
+	
 	/* We show the comic only if it exists. */
-	if ($rs)
-	{
+	if ($rs) {
 		$comic_id = $rs[0];
 		$comic_path = $rs[1];
 		$comic_title = $rs[2];
@@ -33,10 +41,9 @@
 		/* Printing the comic. */
 		require_once('includes/comic.php');
 	} else {
-		include_once('includes/headerwc.html');
-		print "\t\t\t\t" . '<p>There is no comic to show.</p>' . "\n";
-		include_once('includes/footer.html');
+		print "\t\t\t\t" . '<p>' . $texts['no_comic_show'] . '.</p>' . "\n";
 	}
+	include_once('includes/footer.html');
 	
 	$functions->Disconnect();
 ?>

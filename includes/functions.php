@@ -58,6 +58,7 @@
 				$_SESSION['id'] = $rs[0];
 				$_SESSION['user'] = $rs[1];
 				$_SESSION['type'] = $rs[2];
+				$_SESSION['language'] = "es_ES";
 				return TRUE;
 			}
 			else
